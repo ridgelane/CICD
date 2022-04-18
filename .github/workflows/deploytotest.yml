@@ -18,7 +18,7 @@ jobs:
       id: sncicd-publish-app
       uses: ServiceNow/sncicd-publish-app@1.2.0
       with:
-        versionFormat: detect
+        versionFormat: ${{ secrets.VERSION }}
       env:
         snowUsername: ${{ secrets.NOW_USERNAME }}
         snowPassword: ${{ secrets.NOW_PASSWORD }}
